@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <form [formGroup]="createEmpresa" (ngSubmit)="submit()" class="col-md-6">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input id="nombre" type="text" formControlName="nombre" class="form-control">
+      </div>
+
+      <div *ngIf="createEmpresa.get('nombre')?.invalid" class="text-danger">
+        Introduzca el nombre correctamente.
+      </div>
+
+      <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <input id="descripcion" type="text" formControlName="descripcion" class="form-control">
+      </div>
+
+      <div *ngIf="createEmpresa.get('descripcion')?.invalid" class="text-danger">
+        Introduzca la descripcion correctamente.
+      </div>
+
+      <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección</label>
+        <input id="direccion" type="text" formControlName="direccion" class="form-control">
+      </div>
+
+      <div *ngIf="createEmpresa.get('direccion')?.invalid" class="text-danger">
+        Introduzca la direccion correctamente.
+      </div>
+
+      <div class="mb-3">
+        <label for="img" class="form-label">Imagen</label>
+        <input id="img" type="text" formControlName="img" class="form-control">
+      </div>
+
+      <div *ngIf="createEmpresa.get('img')?.invalid" class="text-danger">
+        Introduzca la url de la imagen correctamente.
+      </div>
+
+      <div class="mb-3">
+        <label for="latitud" class="form-label">Latitud</label>
+        <input id="latitud" type="number" formControlName="latitud" class="form-control">
+      </div>
+
+      <div *ngIf="createEmpresa.get('latitud')?.invalid" class="text-danger">
+        Introduzca la latitud correctamente.
+      </div>
+
+      <div class="mb-3">
+        <label for="longitud" class="form-label">Longitud</label>
+        <input id="longitud" type="number" formControlName="longitud" class="form-control">
+      </div>
+
+      <div *ngIf="createEmpresa.get('longitud')?.invalid" class="text-danger">
+        Introduzca la longitud correctamente.
+      </div>
+
+      <div class="mb-3">
+        <label for="fechaFundacion" class="form-label">Fecha Fundación</label>
+        <input id="fechaFundacion" type="date" value="2000-01-01" formControlName="fechaFundacion" class="form-control">
+      </div>
+
+      <div *ngIf="createEmpresa.get('fechaFundacion')?.invalid" class="text-danger">
+        Introduzca fecha de la fundacion correctamente.
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="createEmpresa.invalid">Crear</button>
+    </form>
+  </div>
+</div>

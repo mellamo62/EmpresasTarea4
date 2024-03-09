@@ -1,0 +1,25 @@
+.data{
+  font-size: 1.1em;
+  text-decoration: none;
+  color: black;
+}
+.txt{
+  font-size: 1.5em;
+  text-decoration: none;
+  color: black;
+}
+#fundacionC{
+  margin-top: 5em;
+}
+
+#direccionC{
+  margin-top: 5em;
+}
+
+#title{
+  font-size: 4em;
+}
+
+#descTxt{
+  font-size: 1.5em;
+}
